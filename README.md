@@ -69,8 +69,7 @@ A brief description of auto check api.
 
 ## Folder Structure
 
-.
-```├── README.md              # Project documentation```
+.```├── README.md              # Project documentation```
 ```├── node_modules           # Project dependencies```
 ```├── package-lock.json      # Lock file for npm dependencies```
 ```├── package.json           # Project metadata and scripts```
