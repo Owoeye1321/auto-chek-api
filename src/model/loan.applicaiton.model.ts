@@ -41,7 +41,7 @@ const loanApplicationSchema = new Schema(
     awareness_note: { type: String, default: null },
     bnv: { type: String, default: null },
     nationality: { type: String, default: null },
-    status: { type: String, default: null },
+    status: { type: String, default: 'pending' },
     gender: { type: String, default: null },
     national_status: { type: String, default: null },
     profession: { type: String, default: null },
