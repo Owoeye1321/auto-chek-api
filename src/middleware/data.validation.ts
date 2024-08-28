@@ -60,3 +60,40 @@ export const vehicleValuationRequestDataValidation = async (
     next(error);
   }
 };
+
+export const loanSubmissionValidation = async (
+  req: any,
+  res: any,
+  next: any
+) => {
+  try {
+    const loanSubmissionValidation = joi.object({
+      first_name: joi.string().required(),
+      last_name: joi.string().required(),
+      date_of_birth: joi.string().required(),
+      email_address: joi.string().required(),
+      phone: joi.string().required(),
+      nim: joi.string().required(),
+      awareness_note: joi.string().required(),
+      bnv: joi.string().required(),
+      nationality: joi.string().required(),
+      gender: joi.string().required(),
+      national_status: joi.string().required(),
+      prefession: joi.string().required(),
+      desired_equity_contribution: joi.string().required(),
+      desired_monthly_payment: joi.string().required(),
+      interest_rate_type: joi.string().required(),
+      desired: joi.string().required(),
+      balloon_percentage: joi.string().required(),
+      desired_loan_term: joi.string().required(),
+      desired_repayment_date: joi.string().required(),
+      roadworthiness: joi.string().required(),
+      licence_renewal: joi.string().required(),
+      fee_payment_type: joi.string().required(),
+    });
+    const data = await loanSubmissionValidation.validateAsync(req.body);
+    if (data) next();
+  } catch (error) {
+    next(error);
+  }
+};

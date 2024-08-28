@@ -1,2 +1,3 @@
 import { VehicleService } from "./vehicle.service";
-export { VehicleService };
+import { LoanService } from "./loan.service";
+export { VehicleService, LoanService };

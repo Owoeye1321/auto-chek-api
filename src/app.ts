@@ -53,7 +53,7 @@ app.use(
 app.get("/", (_req, res) => {
   res.status(httpStatus.OK).send({
     service: `${APP_NAME}`,
-    message: `Welcome to the ${APP_NAME}. oredo magic happens here!`,
+    message: `Welcome to the ${APP_NAME}!`,
   });
 });
 
