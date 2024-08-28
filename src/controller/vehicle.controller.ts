@@ -24,4 +24,11 @@ export class VehicleController {
       });
     }
   );
+  viewVehicle = catchAsync(async (req: any, res: any, next: any) => {
+    res.status(httpStatus.OK).json({
+      code: httpStatus.OK,
+      message: "success",
+      data: await this._vehicleService.viewVehicles(req.query.vehicleId),
+    });
+  });
 }

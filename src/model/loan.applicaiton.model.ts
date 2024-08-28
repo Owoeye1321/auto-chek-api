@@ -24,6 +24,7 @@ export interface ILoanApplication {
   roadworthiness: string;
   licence_renewal: string;
   fee_payment_type: string;
+  status: string;
 }
 export default interface ILoanApplicationModel
   extends Document,
@@ -40,6 +41,7 @@ const loanApplicationSchema = new Schema(
     awareness_note: { type: String, default: null },
     bnv: { type: String, default: null },
     nationality: { type: String, default: null },
+    status: { type: String, default: null },
     gender: { type: String, default: null },
     national_status: { type: String, default: null },
     prefession: { type: String, default: null },

@@ -97,3 +97,26 @@ export const loanSubmissionValidation = async (
     next(error);
   }
 };
+
+export const updateLoanStatusValidation = async (
+  req: any,
+  res: any,
+  next: any
+) => {
+  try {
+    const vehicleValuationRequestDataValidation = joi.object({
+      status: joi.string().required(),
+      loanId: joi
+        .string()
+        .pattern(/^[a-fA-F0-9]{24}$/)
+        .required(),
+    });
+    const data = await vehicleValuationRequestDataValidation.validateAsync({
+      ...req.query,
+      ...req.body,
+    });
+    if (data) next();
+  } catch (error) {
+    next(error);
+  }
+};

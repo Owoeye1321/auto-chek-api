@@ -16,4 +16,21 @@ export class LoanController {
       });
     }
   );
+  updateLoanStatus = catchAsync(async (req: any, res: any, next: any) => {
+    res.status(httpStatus.OK).json({
+      code: httpStatus.OK,
+      message: "success",
+      data: await this._loanService.updateLoanStatus(
+        req.query.loanId,
+        req.body.status
+      ),
+    });
+  });
+  viewLoanApplications = catchAsync(async (req: any, res: any, next: any) => {
+    res.status(httpStatus.OK).json({
+      code: httpStatus.OK,
+      message: "success",
+      data: await this._loanService.viewLoanApplications(req.query.loanId),
+    });
+  });
 }
