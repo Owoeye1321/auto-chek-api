@@ -1,3 +1,5 @@
+import { Vehicle } from "@/model/vehicle.model";
+import httpStatus from "http-status";
 import joi from "joi";
 
 /**
@@ -37,7 +39,18 @@ export const validateVehicleDataInjection = async (
     });
 
     const data = await vehicleInjestionValidation.validateAsync(req.body);
-    if (data) next();
+    if (data) {
+      if (data) {
+        if (
+          await Vehicle.findOne({
+            $or: [{ vehicle_id: req.body.vehicle_id }, { vin: req.body.vin }],
+          })
+        )
+          res.status(httpStatus.BAD_REQUEST).json({code:httpStatus.BAD_REQUEST, "Vehicle detail already exist"});
+        next();
+      }
+      next();
+    }
   } catch (error) {
     next(error);
   }
