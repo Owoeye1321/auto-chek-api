@@ -112,7 +112,7 @@ export const loanSubmissionValidation = async (
       nationality: joi.string().required(),
       gender: joi.string().required(),
       national_status: joi.string().required(),
-      prefession: joi.string().required(),
+      profession: joi.string().required(),
       desired_equity_contribution: joi.string().required(),
       desired_monthly_payment: joi.string().required(),
       interest_rate_type: joi.string().required(),

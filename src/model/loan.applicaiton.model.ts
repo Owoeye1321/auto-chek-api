@@ -13,7 +13,7 @@ export interface ILoanApplication {
   nationality: string;
   gender: string;
   national_status: string;
-  prefession: string;
+  profession: string;
   desired_equity_contribution: string;
   desired_monthly_payment: string;
   interest_rate_type: string;
@@ -44,7 +44,7 @@ const loanApplicationSchema = new Schema(
     status: { type: String, default: null },
     gender: { type: String, default: null },
     national_status: { type: String, default: null },
-    prefession: { type: String, default: null },
+    profession: { type: String, default: null },
     desired_equity_contribution: { type: String, default: null },
     desired_monthly_payment: { type: String, default: null },
     interest_rate_type: { type: String, default: null },
