@@ -23,8 +23,17 @@ export const validateVehicleDataInjection = async (
       wmi: joi.string().required(),
       vds: joi.string().required(),
       vis: joi.string().required(),
-      year: joi.string().required(),
+      year: joi.number().required(),
+      amount: joi.number().required(),
       maker: joi.string().required(),
+      name: joi.string().required(),
+      engine: joi.string().required(),
+      transmission: joi.string().required(),
+      fuel_type: joi.string().required(),
+      interior_color: joi.string().required(),
+      exterior_color: joi.string().required(),
+      vehicle_id: joi.string().required(),
+      mileage: joi.number().required(),
     });
 
     const data = await vehicleInjestionValidation.validateAsync(req.body);
