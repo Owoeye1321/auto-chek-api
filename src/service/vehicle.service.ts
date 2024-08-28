@@ -15,6 +15,12 @@ export class VehicleService {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
+  /**
+   *
+   * @param vin This is basically the vehicle identification number
+   * the abstraction below returns the vin data of the vehicle
+   * @returns
+   */
   vehicleValuationRequest = async (
     vin: string
   ): Promise<IVinLookUpResponse> => {
@@ -43,6 +49,12 @@ export class VehicleService {
     }
   };
 
+  /**
+   *
+   * @param vehicleId This is basically the vehicleId
+   * the abstraction below returns the vehicle data
+   * @returns
+   */
   viewVehicles = async (
     vehicleId?: Schema.Types.ObjectId
   ): Promise<IVehicle | IVehicle[]> => {

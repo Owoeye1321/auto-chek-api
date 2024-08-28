@@ -1,3 +1,6 @@
+/**
+ * this is the interface for the response coming from the vin lookup from sky scanner
+ */
 export interface IVinLookUpResponse {
   vin:string;
   country:string;

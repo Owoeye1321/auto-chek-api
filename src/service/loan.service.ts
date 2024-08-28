@@ -8,6 +8,12 @@ import { Schema } from "mongoose";
 import joi from "joi";
 
 export class LoanService {
+  /**
+   *
+   * @param payload This in include the loan application submission data
+   * the abstraction below creates a new loan application submission
+   * @returns
+   */
   loanApplicationSubmission = async (
     payload: ILoanApplication
   ): Promise<ILoanApplication> => {
@@ -17,6 +23,14 @@ export class LoanService {
       throw new ApiError(httpStatus.UNPROCESSABLE_ENTITY, error.message);
     }
   };
+
+  /**
+   *
+   * @param loanId This is basically the loanid
+   * @param status This in bacally the status to be updated
+   * the abstraction below updates the loans status
+   * @returns
+   */
   updateLoanStatus = async (
     loanId: Schema.Types.ObjectId,
     status: string
@@ -32,6 +46,12 @@ export class LoanService {
     }
   };
 
+  /**
+   *
+   * @param loanId This is basically the loanid
+   * the abstraction below returns loan application details
+   * @returns
+   */
   viewLoanApplications = async (
     loanId?: Schema.Types.ObjectId
   ): Promise<ILoanApplication[] | ILoanApplication> => {

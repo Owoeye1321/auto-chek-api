@@ -43,6 +43,14 @@ export const validateVehicleDataInjection = async (
   }
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ * this middleware handle the vehicle valuation request validation
+ */
+
 export const vehicleValuationRequestDataValidation = async (
   req: any,
   res: any,
@@ -61,6 +69,13 @@ export const vehicleValuationRequestDataValidation = async (
   }
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ * this middleware handle the loan submission valuation
+ */
 export const loanSubmissionValidation = async (
   req: any,
   res: any,
@@ -98,6 +113,13 @@ export const loanSubmissionValidation = async (
   }
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @param next
+ * this middleware handle the update loan status valuation
+ */
 export const updateLoanStatusValidation = async (
   req: any,
   res: any,

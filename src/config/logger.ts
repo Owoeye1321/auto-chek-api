@@ -1,6 +1,8 @@
 import winston from "winston";
 import { IS_PRODUCTION } from "@/config";
-
+/**
+ * the function blow is used to enumbrate error format
+ */
 const enumerateErrorFormat = winston.format((info: any) => {
   if (info instanceof Error) {
     Object.assign(info, { message: info.stack });
@@ -8,6 +10,10 @@ const enumerateErrorFormat = winston.format((info: any) => {
   return info;
 });
 
+/**
+ * the main logger funcion
+ * this is the configuration of the eroor logger
+ */
 export const logger = winston.createLogger({
   level: IS_PRODUCTION ? "info" : "debug",
   format: winston.format.combine(
@@ -22,4 +28,3 @@ export const logger = winston.createLogger({
     }),
   ],
 });
-
