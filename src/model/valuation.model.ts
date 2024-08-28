@@ -1,7 +1,7 @@
 import { Document, model, Schema } from "mongoose";
 import Double from "mongodb";
 
-export interface IVariation {
+export interface IValuation {
   vin: string;
   country: string;
   manufacturer: string;
@@ -12,11 +12,11 @@ export interface IVariation {
   vds: string;
   vis: string;
   year: string;
-  maker:string;
+  maker: string;
 }
-export default interface IVariationModel extends Document, IVariation {}
+export default interface IValuationModel extends Document, IValuation {}
 
-const variationSchema = new Schema(
+const valuationSchema = new Schema(
   {
     vin: { type: String, default: null },
     country: { type: String, default: null },
@@ -33,4 +33,4 @@ const variationSchema = new Schema(
   { timestamps: true }
 );
 
-export const Variation = model<IVariationModel>("variation", variationSchema);
+export const Valuation = model<IValuationModel>("valuation", valuationSchema);

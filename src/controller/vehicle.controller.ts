@@ -14,4 +14,14 @@ export class VehicleController {
       data: await this._vehicleService.vehicleInjestion(req.body),
     });
   });
+
+  vehicleValuationRequest = catchAsync(
+    async (req: any, res: any, next: any) => {
+      res.status(httpStatus.OK).json({
+        code: httpStatus.OK,
+        message: "success",
+        data: await this._vehicleService.vehicleValuationRequest(req.query.vin),
+      });
+    }
+  );
 }

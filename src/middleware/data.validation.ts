@@ -42,3 +42,21 @@ export const validateVehicleDataInjection = async (
     next(error);
   }
 };
+
+export const vehicleValuationRequestDataValidation = async (
+  req: any,
+  res: any,
+  next: any
+) => {
+  try {
+    const vehicleValuationRequestDataValidation = joi.object({
+      vin: joi.string().required(),
+    });
+    const data = await vehicleValuationRequestDataValidation.validateAsync(
+      req.query
+    );
+    if (data) next();
+  } catch (error) {
+    next(error);
+  }
+};

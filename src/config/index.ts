@@ -14,6 +14,11 @@ export const DB = {
   USER: process.env.USER,
   PORT: process.env.PORT,
 };
+export const rapidApi = {
+  rapid_api_ua: process.env.RAPID_API_UA,
+  rapid_api_key: process.env.RAPID_API_KEY,
+  rapid_api_host: process.env.RAPID_API_HOST,
+};
 
 export const APP_NAME = process.env.APP_NAME;
 export const APP_PREFIX_PATH = process.env.APP_PREFIX_PATH;
