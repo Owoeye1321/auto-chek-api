@@ -12,6 +12,7 @@ export interface IVariation {
   vds: string;
   vis: string;
   year: string;
+  maker:string;
 }
 export default interface IVariationModel extends Document, IVariation {}
 
@@ -26,6 +27,7 @@ const variationSchema = new Schema(
     wmi: { type: String, default: null },
     vds: { type: String, default: null },
     vis: { type: String, default: null },
+    maker: { type: String, default: null },
     year: { type: String, default: null },
   },
   { timestamps: true }
