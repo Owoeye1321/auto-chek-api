@@ -37,4 +37,4 @@ const vehicleSchema = new Schema(
   { timestamps: true }
 );
 
-const Vehicle = model<IVehicleModel>("vehicle", vehicleSchema);
+export const Vehicle = model<IVehicleModel>("vehicle", vehicleSchema);

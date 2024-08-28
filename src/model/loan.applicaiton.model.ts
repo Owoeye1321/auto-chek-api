@@ -57,7 +57,7 @@ const loanApplicationSchema = new Schema(
   { timestamps: true }
 );
 
-const LoanApplication = model<ILoanApplicationModel>(
+export const LoanApplication = model<ILoanApplicationModel>(
   "loanApplication",
   loanApplicationSchema
 );

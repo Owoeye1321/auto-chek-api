@@ -33,4 +33,4 @@ const variationSchema = new Schema(
   { timestamps: true }
 );
 
-const Variation = model<IVariationModel>("variation", variationSchema);
+export const Variation = model<IVariationModel>("variation", variationSchema);
