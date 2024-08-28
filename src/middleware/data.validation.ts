@@ -46,7 +46,12 @@ export const validateVehicleDataInjection = async (
             $or: [{ vehicle_id: req.body.vehicle_id }, { vin: req.body.vin }],
           })
         )
-          res.status(httpStatus.BAD_REQUEST).json({code:httpStatus.BAD_REQUEST, "Vehicle detail already exist"});
+          res
+            .status(httpStatus.BAD_REQUEST)
+            .json({
+              code: httpStatus.BAD_REQUEST,
+              message: "Vehicle detail already exist",
+            });
         next();
       }
       next();
