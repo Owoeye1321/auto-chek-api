@@ -49,4 +49,22 @@ A brief description of auto check api.
    ```
 
 2. **Access the application**
-3. \*\*Open your browser and navigate to `http://localhost:1111`
+   \*\*Open your browser and navigate to `http://localhost:1111`
+
+##Environment variables
+
+1.  **To run this project, you will need to add the following environment variables to your .env file:**
+    1. **For Production**
+       `PORT` =1111
+       `APP_ENV` =development
+       `DB_URI`=mongodb://localhost:27017/auto-check `Use this for development mode`
+       `HOST`=
+       `NAME`=
+       `PASSWORD`=
+       `USER`=
+       `DB_PORT`=
+       `APP_NAME`=Auto check api
+       `APP_PREFIX_PATH`=/api/v1
+       `RAPID_API_UA` = RapidAPI-Playground
+       `RAPID_API_KEY` = 37f4bc3034msha49c34d8cab9a70p1a537fjsnc2dbc343db77
+       `RAPID_API_HOST` = https://vin-lookup-by-api-ninjas.p.rapidapi.com/v1
