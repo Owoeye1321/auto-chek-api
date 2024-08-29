@@ -107,3 +107,10 @@ A brief description of auto check api.
 │       └── vehicle.service.ts # Vehicle-related services
 ├── tsconfig.json          # TypeScript configuration
 └── yarn.lock              # Lock file for Yarn dependencies
+
+
+## Incomplete session
+ **Loan eligibility**
+     **Reason**
+        1. **The predefined criteria for the loan eligibility is not clear enough**
+        2. **I need clear loan eligibility criteria to implement the functionality**
